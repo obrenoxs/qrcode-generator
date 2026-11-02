@@ -22,7 +22,7 @@ public class QrCodeGeneratorService {
         this.storage = storage;
     }
 
-    public QrCodeGenerateResponse generateAndUploadRequest(String text) throws WriterException, IOException {
+    public QrCodeGenerateResponse generateAndUploadQrCode(String text) throws WriterException, IOException {
         QRCodeWriter qrCodeWriter = new QRCodeWriter();
         BitMatrix bitMatrix= qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, 200, 200);
 
